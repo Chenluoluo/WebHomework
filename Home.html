@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>主页</title>
+    <link rel="stylesheet" href="static/css/uikit.min.css">
+    <link rel="stylesheet" href="static/css/uikit.gradient.min.css">
+    <link rel="stylesheet" href="static/css/awesome.css">
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/uikit.min.js"></script>
+</head>
+<body class="uk-height-1-1"">
+    <nav class="uk-navbar uk-navbar-attached uk-margin-bottom">
+        <div class="uk-container uk-container-center">
+            <a href="Home.html" class="uk-navbar-brand">ChenLuoLuo</a>
+            <ul class="uk-navbar-nav">
+                <li><a href="Home.html"><i class="uk-icon-home"></i> 主页</a></li>
+                <li><a href="Edit.html"><i class="uk-icon-book"></i> 编辑</a></li>
+                <li><a href="#"><i class="uk-icon-code"></i> 源码</a></li>
+            </ul>
+            <div class="uk-navbar-flip">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-parent" data-uk-dropdown>
+                        <a href="#"><i class="uk-icon-user"></i>我的信息</a>
+                        <div class="uk-dropdown uk-dropdown-navbar">
+                            <ul class="uk-nav uk-nav-navbar">
+                                <li><a href="SignIn.html"><i class="uk-icon-sign-out"></i> 登出</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="SignIn.html"><i class="uk-icon-sign-in"></i> 登陆</a></li>
+                    <li><a href="Register.html"><i class="uk-icon-edit"></i> 注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="uk-container uk-container-center">
+        <div class="uk-grid">
+            <!-- content -->
+                <div class="uk-width-medium-3-4">
+                    <article class="uk-article">
+                        <h2><a href="Blog.html">目标文件格式</a></h2>
+                        <p class="uk-article-meta">发表于2017.11.28</p>
+                        <!-- <p>文章内容</p> -->
+                        <div class="post-body" itemprop="articleBody">
+                            <h2 id="什么是目标文件"><a href="#什么是目标文件" class="headerlink" title="什么是目标文件"></a>什么是目标文件</h2>
+                            <p>　　目标文件：编译器编译源代码后生成的文件。从结构上讲，它是已经编译后的可执行文件格式，只是还没有经过链接的过程，其中有些富豪或者有些地址还没有被调整。它本身就是按照可执行文件格式存储的，只是跟真正的可执行文件在结构上稍有不同。</p>
+                            <p>　　可执行文件涵盖了程序的编译、链接、装载和执行的各个方面。</p>
+                            <h2 id="目标文件格式"><a href="#目标文件格式" class="headerlink" title="目标文件格式"></a>目标文件格式</h2>
+                            <p>　　Windows下的PE(Portable Excutable)和Linux下的ELF(Excutable Linkable Format)，他们都是COFF(Common File Format)格式的变种。目标文件就是源代码编译后，但未进行连接的那些中间文件，它跟可执行文件的内容、结构很相似，一般跟可执行文件一起采用一种格式存储。</p>
+                            <p>　　不光是可执行文件(Windows的.exe和Linux下的ELF可执行文件)按照可执行文件格式存储。动态链接库(Dynamic Linking Library) (Windows的.dll和Linux的so) 和静态链接库(Static Linking Library) (Windows的.lib和Linux的.a)都按照可执行文件格式存储。他们在Windows下按照PE-COFF格式存储，Linux下按照ELF格式存储。</p>
+                            <p>ELF文件标准里，把系统中太重ELF格式的文件归为以下四类：  </p>
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                    <th>ELF文件类型</th>
+                                    <th>说明</th>
+                                    <th>实例</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>可重定位文件(Relocatable File)</td>
+                                        <td>这类文件包含了了代码和数据，可以被用来连接成可执行文件或共享目标文件，静态链接库也可以归为这一类</td>
+                                        <td>Linux的.o Windows的.obj</td>
+                                    </tr>
+                                        <tr>
+                                        <td>可执行文件(Executable File)</td>
+                                        <td>这类文件包含了可直接执行的程序，它的代表就是ELF可执行文件，他们一般没有扩展名。</td>
+                                        <td>例如/bin/bash文件 Windows的.exe</td>
+                                    </tr>
+                                    <tr>
+                                        <td>共享目标文件(Shared Object File)</td>
+                                        <td>这种文件包含了代码和数据，可以在以下两种情况下使用，一种是连接器可以使用这种文件跟其他的可重定位文件和共享目标文件连接，产生新的目标文件，第二种是动态链接器可以将几个这种共享目标文件与可执行文件结合，作为进程映像的一部分来运行</td>
+                                        <td>Linux的.so Windows的DLL</td>
+                                    </tr>
+                                    <tr>
+                                        <td>核心转储文件(Core Dump File)</td>
+                                        <td>当进程意外终止时，系统可以将该进程的地址空间的内容及终止时的一些其他信息转储到核心转储文件</td>
+                                        <td>Linux下的core dump</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><a href="Blog.html">继续阅读 <i class="uk-icon-angle-double-right"></i></a></p>
+                    </article>
+                    <hr class="uk-article-divider">
+                </div>
+                <div class="uk-width-medium-1-4">
+                    <div class="uk-panel uk-panel-header">
+                        <h3 class="uk-panel-title">友情链接</h3>
+                        <ul class="uk-list uk-list-line">
+                            <li><i class="uk-icon-thumbs-o-up"></i> <a href="#">编程</a></li>
+                            <li><i class="uk-icon-thumbs-o-up"></i> <a href="#">读书</a></li>
+                            <li><i class="uk-icon-thumbs-o-up"></i> <a href="#">比赛</a></li>
+                            <li><i class="uk-icon-thumbs-o-up"></i> <a href="#">新闻</a></li>
+                        </ul>
+                    </div>
+                </div>
+            <!-- // content -->
+        </div>
+    </div>
+
+    <div class="uk-margin-large-top" style="background-color:#eee; border-top:1px solid #ccc;">
+        <div class="uk-container uk-container-center uk-text-center">
+            <div class="uk-panel uk-margin-top uk-margin-bottom">
+                <p>
+                    <a target="_blank" href="http://weibo.com/u/5661149316" class="uk-icon-button uk-icon-weibo"></a>
+                    <a target="_blank" href="https://github.com/chenluoluo" class="uk-icon-button uk-icon-github"></a>
+                    <a target="_blank" href="http://www.linkedin.com/in/chenluoluo" class="uk-icon-button uk-icon-linkedin-square"></a>
+                    <a target="_blank" href="https://twitter.com/chenluoluo" class="uk-icon-button uk-icon-twitter"></a>
+                </p>
+                <p>Powered by <a href="http://www.ciwest.cn">ChenLuoLuo</a>. Copyright &copy; 2017. 
+                    [<a href="#">Manage</a>]</p>
+                <p><a href="http://www.ciwest.cn" target="_blank">www.ciwest.cn</a>. All rights reserved.</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

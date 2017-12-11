@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>编辑</title>
+    <link rel="stylesheet" href="static/css/uikit.min.css">
+    <link rel="stylesheet" href="static/css/uikit.gradient.min.css">
+    <link rel="stylesheet" href="static/css/awesome.css">
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/uikit.min.js"></script>
+    <script>
+    $(function () {
+        $('#vm').show();
+    });
+    </script>
+
+</head>
+<body class="uk-height-1-1">
+    <nav class="uk-navbar uk-navbar-attached uk-margin-bottom">
+        <div class="uk-container uk-container-center">
+            <a href="Home.html" class="uk-navbar-brand">ChenLuoLuo</a>
+            <ul class="uk-navbar-nav">
+                <li><a href="Home.html"><i class="uk-icon-home"></i> 主页</a></li>
+                <li><a href="Edit.html"><i class="uk-icon-book"></i> 编辑</a></li>
+                <li><a href="#"><i class="uk-icon-code"></i> 源码</a></li>
+            </ul>
+            <div class="uk-navbar-flip">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-parent" data-uk-dropdown>
+                        <a href="#"><i class="uk-icon-user"></i>我的信息</a>
+                        <div class="uk-dropdown uk-dropdown-navbar">
+                            <ul class="uk-nav uk-nav-navbar">
+                                <li><a href="SignIn.html"><i class="uk-icon-sign-out"></i> 登出</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="SignIn.html"><i class="uk-icon-sign-in"></i> 登陆</a></li>
+                    <li><a href="Register.html"><i class="uk-icon-edit"></i> 注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="uk-container uk-container-center">
+        <div class="uk-grid">
+            <!-- content -->
+
+            <div class="uk-width-1-1 uk-margin-bottom">
+                <div class="uk-panel uk-panel-box">
+                    <ul class="uk-breadcrumb">
+                        <li><a href="#">评论</a></li>
+                        <li><a href="#">日志</a></li>
+                        <li><a href="#">用户</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="vm" class="uk-width-2-3">
+                <form v-on="submit: submit" class="uk-form uk-form-stacked">
+                    <div class="uk-alert uk-alert-danger uk-hidden"></div>
+                    <div class="uk-form-row">
+                        <label class="uk-form-label">标题:</label>
+                        <div class="uk-form-controls">
+                            <input v-model="name" name="name" type="text" placeholder="标题" class="uk-width-1-1">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label class="uk-form-label">摘要:</label>
+                        <div class="uk-form-controls">
+                            <textarea v-model="summary" rows="4" name="summary" placeholder="摘要" class="uk-width-1-1" style="resize:none;"></textarea>
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label class="uk-form-label">内容:</label>
+                        <div class="uk-form-controls">
+                            <textarea v-model="content" rows="16" name="content" placeholder="内容" class="uk-width-1-1" style="resize:none;"></textarea>
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <button type="submit" class="uk-button uk-button-primary"><i class="uk-icon-save"></i> 保存</button>
+                        <a href="Home.gtml" class="uk-button"><i class="uk-icon-times"></i> 取消</a>
+                    </div>
+                </form>
+            </div>
+            <!-- // content -->
+        </div>
+    </div>
+
+    <div class="uk-margin-large-top" style="background-color:#eee; border-top:1px solid #ccc;">
+        <div class="uk-container uk-container-center uk-text-center">
+            <div class="uk-panel uk-margin-top uk-margin-bottom">
+                <p>
+                    <a target="_blank" href="http://weibo.com/u/5661149316" class="uk-icon-button uk-icon-weibo"></a>
+                    <a target="_blank" href="https://github.com/chenluoluo" class="uk-icon-button uk-icon-github"></a>
+                    <a target="_blank" href="http://www.linkedin.com/in/chenluoluo" class="uk-icon-button uk-icon-linkedin-square"></a>
+                    <a target="_blank" href="https://twitter.com/chenluoluo" class="uk-icon-button uk-icon-twitter"></a>
+                </p>
+                <p>Powered by <a href="http://www.ciwest.cn">ChenLuoLuo</a>. Copyright &copy; 2017. 
+                    [<a href="#">Manage</a>]</p>
+                <p><a href="http://www.ciwest.cn" target="_blank">www.ciwest.cn</a>. All rights reserved.</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+
